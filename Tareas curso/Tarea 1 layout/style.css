@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+.todos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+.caja{
+    margin: 5px;
+}
+.verde{
+    background-color: rgb(153, 255, 0);
+    height: 15%;
+    width: 20%;
+    
+}
+.gris{
+    background-color: gray;
+    width: 75%;
+    height: 15%;
+}
+.blanco{
+    background-color: white;
+    height: 8%;
+    width: 97%;
+    border: 2px solid;
+}
+.violeta{
+    background-color: rgb(161, 19, 161);
+    height: 50%;
+    width: 30%;
+    
+}
+.azul{
+    background-color: blue;
+    width: 30%;
+    height: 20%;
+    
+}
+.rosa{
+    background-color: pink;
+    width: 30%;
+    height: 20%;
+}
+.naranja{
+    background-color: orangered;
+    width: 60%;
+    height: 30%;
+}
+.celeste{
+    background-color: skyblue;
+    height: 15%;
+    width: 98%;
+    border: 2px dashed black;
+}

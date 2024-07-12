@@ -1,0 +1,12 @@
+.link-interactivo{
+    color: blue;
+    transition: 0.3s;
+}
+
+.link-interactivo:hover{
+    color: lightskyblue;
+}
+
+.link-interactivo:visited{
+    color: blueviolet;
+}
