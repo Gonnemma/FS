@@ -1,0 +1,7 @@
+div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+div p{
+    margin: 10px;
+}
