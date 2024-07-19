@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+
+    background-color: black;
+}
+
+/*         NAV BAR         */
+
+.show{
+    display: flex !important;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+nav ul{ /*links de escritorio*/
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li > a{ /*Estilos para hipervinculos hijos - carro/login/fav */
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+
+    color: white;
+}
+
+nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+    background-color: white;
+}
+
+nav ul li .link:hover:before{ 
+    transform: scaleX(1);
+}
+
+nav .more{
+    display: none;
+}
+
+nav .menu{ /*Menu flotante oculto en el more cuando cambia resolucion*/
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    margin-top: 50px;
+
+    background-color: white;
+}
+
+nav .menu a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+nav .menu a:hover{
+    background-color: black;
+    color: white;
+}
+
+nav .mobil{ /*A partir de aca esta el estilo para el nav en modo mobil, se distingue por la clase .mobil*/
+    display: none;
+    width: 100%;
+}
+
+nav .mobil .header{
+
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: black;
+}
+
+nav .mobil .header a{
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav .mobil .header #bmenu {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+nav .mobil .links{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+}
+
+nav .mobil .links a{
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav .mobil .links a:hover{
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+@media screen and (max-width: 1044px){ /*media query para esconder menus y mostrar menu more*/
+    nav .link-hide{
+        display: none;
+    }
+    nav .more{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 706px){ /*media query para que entre en modo mobil*/
+    
+    nav{
+        width: 100%;
+        padding: 0;
+    }
+    nav ul{
+        display: none;
+    }
+    nav .mobil{
+        display: block;
+    }
+}
