@@ -9,7 +9,6 @@ body{
     margin: 0;
     line-height: 1.5;
 
-    background-color: black;
 }
 
 /*         NAV BAR         */
@@ -23,6 +22,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
+    background-color: white;
+    position: fixed;
+    width: 100%;
 }
 
 nav ul{ /*links de escritorio*/
@@ -38,7 +40,7 @@ nav ul li > a{ /*Estilos para hipervinculos hijos - carro/login/fav */
     padding: 20px 15px 10px 15px;
     text-decoration: none;
 
-    color: white;
+    color: black
 }
 
 nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
@@ -52,7 +54,7 @@ nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
     transform: scaleX(0);
     transition: transform 0.3s ease;
 
-    background-color: white;
+    background-color:black
 }
 
 nav ul li .link:hover:before{ 
@@ -68,20 +70,20 @@ nav .menu{ /*Menu flotante oculto en el more cuando cambia resolucion*/
     display: none;
     flex-direction: column;
     min-width: 200px;
-    margin-top: 50px;
+    margin-top: 54px;
 
-    background-color: white;
+    background-color: black
 }
 
 nav .menu a{
     padding: 10px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 nav .menu a:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 nav .mobil{ /*A partir de aca esta el estilo para el nav en modo mobil, se distingue por la clase .mobil*/
@@ -95,12 +97,12 @@ nav .mobil .header{
     text-align: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: black;
+    background-color: white;
 }
 
 nav .mobil .header a{
     display: inline-flex;
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 10px;
 }
@@ -108,7 +110,7 @@ nav .mobil .header a{
 nav .mobil .header #bmenu {
     border: none;
     background-color: transparent;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -124,7 +126,7 @@ nav .mobil .links a{
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 nav .mobil .links a:hover{
@@ -132,10 +134,40 @@ nav .mobil .links a:hover{
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
 }
 
+/*-----------------------------------------------------------------------*/
+
+.main{
+    background-color: red;
+    height: 600px;
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+}
+
+.destacados{
+    background-color: green;
+    height: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.oferta-dia{
+    background-color: orangered;
+    height: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.footer{
+    background-color: gray;
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
+}
 @media screen and (max-width: 1044px){ /*media query para esconder menus y mostrar menu more*/
     nav .link-hide{
         display: none;
