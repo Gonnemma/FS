@@ -25,6 +25,7 @@ nav{
     background-color: white;
     position: fixed;
     width: 100%;
+    z-index: 200;
 }
 
 nav ul{ /*links de escritorio*/
@@ -39,8 +40,7 @@ nav ul li > a{ /*Estilos para hipervinculos hijos - carro/login/fav */
     position: relative;
     padding: 20px 15px 10px 15px;
     text-decoration: none;
-
-    color: black
+    color: black;
 }
 
 nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
@@ -54,7 +54,7 @@ nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
     transform: scaleX(0);
     transition: transform 0.3s ease;
 
-    background-color:black
+    background-color:black;
 }
 
 nav ul li .link:hover:before{ 
@@ -168,6 +168,52 @@ nav .mobil .links a:hover{
     text-align: center;
     font-size: 50px;
 }
+
+
+/*         HEADER         */
+
+header{
+    background-image: url(../img/header2.jpg);
+    background-size:cover;
+    background-position: center -100px;
+    height: 100vh;
+    
+}
+
+
+/*         BANNER         */
+
+
+#banner{
+    font-size: 1.4em;
+    text-align: center;
+    padding: 40px;
+    width: 350px;
+    position: absolute;
+    z-index: 100;
+    top: 155px;
+    right: 55px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.boton-compra{
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 40px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.boton-compra:hover{
+    background-color: rgb(199, 187, 187);
+}
+
 @media screen and (max-width: 1044px){ /*media query para esconder menus y mostrar menu more*/
     nav .link-hide{
         display: none;
@@ -188,5 +234,8 @@ nav .mobil .links a:hover{
     }
     nav .mobil{
         display: block;
+    }
+    header{
+        height: 80vh;
     }
 }
