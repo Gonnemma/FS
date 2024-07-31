@@ -91,153 +91,126 @@ nav .mobil{ /*A partir de aca esta el estilo para el nav en modo mobil, se disti
     width: 100%;
 }
 
-nav .mobil .header{
-
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: white;
-}
-
-nav .mobil .header a{
-    display: inline-flex;
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-}
-
-nav .mobil .header #bmenu {
-    border: none;
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-}
-
-nav .mobil .links{
-    display: none;
-    flex-direction: column;
-    position: relative;
-    z-index: 200;
-}
-
-nav .mobil .links a{
-    font-size: 20px;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-}
-
-nav .mobil .links a:hover{
-    font-size: 20px;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-}
-
-/*-----------------------------------------------------------------------*/
-
-.main{
-    background-color: red;
-    height: 600px;
-    text-align: center;
-    font-size: 50px;
-    padding: 50px;
-}
-
-.destacados{
-    background-color: green;
-    height: 200px;
-    text-align: center;
-    font-size: 50px;
-}
-
-.oferta-dia{
-    background-color: orangered;
-    height: 200px;
-    text-align: center;
-    font-size: 50px;
-}
-
-.footer{
-    background-color: gray;
-    height: 100px;
-    text-align: center;
-    font-size: 50px;
-}
-
-
-/*         HEADER         */
+/*         HEADER/IMG         */
 
 header{
     
-    background-image: url(../img/header.jpg);
-    background-size:contain;
-    background-position: left;
+    background-image: url(../img/supermercado2.png);
+    background-size:cover;
+    background-position: center center;
     height: 100vh;
+    width: 100%;
     background-repeat: no-repeat;
-    
 }
 
+h2{
+    font-size: 24px;
+}
 
-/*         BANNER         */
+.lorem-historia{
+    font-size: 16px;
+}
+
+/*         HISTORIA         */
 
 
 #banner{
     font-size: 1.4em;
     text-align: center;
-    padding: 119px;
-    width: 439px;
+    padding: 60px;
+    height: 91.3vh;
+    width: 32%;
     position: absolute;
     z-index: 100;
     top: 53px;
-    right: 0px;
+    left: 0px;
 
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.boton-compra{
-    border: 0;
-    display: inline-flex;
-    align-items: center;
-    font-size: 18px;
-    padding: 10px 40px;
-    background-color: white;
-    color: black;
-    font-weight: bolder;
+/*         FOOTER         */
+
+footer{
+    background: #a5a4a4;
+    padding-top: 5px;
+}
+
+.fcontainer-footer{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contenedor2{
+    width: 33.3%;
+}
+
+.footer-contenedor3{
+    width: 33.3%;
+}
+
+h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-contenedor2 p{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+}
+
+.footer-contenedor2 ul{
+    text-align: center;
+}
+
+.lista{
+    padding: 0;
+}
+
+.lista li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+
+.lista::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+
+.lista li:hover::before{
+    width: 70px;
+}
+
+a{
     text-decoration: none;
 }
 
-.boton-compra:hover{
-    background-color: rgb(199, 187, 187);
+a:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5px;
 }
 
-@media screen and (max-width: 1044px){ /*media query para esconder menus y mostrar menu more*/
-    nav .link-hide{
-        display: none;
-    }
-    nav .more{
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 706px){ /*media query para que entre en modo mobil*/
-    
-    nav{
-        width: 100%;
-        padding: 0;
-    }
-    nav ul{
-        display: none;
-    }
-    nav .mobil{
-        display: block;
-    }
-    header{
-        height: 80vh;
-    }
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
 }
