@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    padding-top: 80px;
+}
+
+/*         NAV BAR         */
+
+.show{
+    display: flex !important;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    top: 0px;
+}
+
+nav ul{ /*links de escritorio*/
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li > a{ /*Estilos para hipervinculos hijos - carro/login/fav */
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li .link::before{ /*Efecto barra blanca abajo de los links*/
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+    background-color:black;
+}
+
+nav ul li .link:hover:before{ 
+    transform: scaleX(1);
+}
+
+nav .more{
+    display: none;
+}
+
+nav .menu{ /*Menu flotante oculto en el more cuando cambia resolucion*/
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    margin-top: 54px;
+
+    background-color: black
+}
+
+nav .menu a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu a:hover{
+    background-color: white;
+    color: black;
+}
+
+nav .mobil{ /*A partir de aca esta el estilo para el nav en modo mobil, se distingue por la clase .mobil*/
+    display: none;
+    width: 100%;
+}
+
+
+/*         PRODUCTOS         */
+
+h1{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+img{
+    width: 220px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.contenedor > div{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #cfb28f;
+    border-radius: 20px;
+}
+
+.contenedor>div:hover{
+    background-color:#b18452;
+}
+
+.informacion{
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.informacion>p:first-child{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+.informacion .precio{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.informacion .precio span{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.informacion button{
+    background-color: #f1ece5;
+    width: 100px;
+    height: 35;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.informacion button:hover{
+    background-color:#cfb28f;
+}
+
+.contenedorTotal{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.total{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #cfb28f;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.50);
+}
+
+.total:hover{
+    background-color: #b18452;
+}
+
+.preciofinal{
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.finalizarCompra{
+    background-color: #f1ece5;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.finalizarCompra:hover{
+    background-color: #cfb28f;
+}
+
+.informacion input{
+    border-style: none;
+    border-radius: 5px;
+}
