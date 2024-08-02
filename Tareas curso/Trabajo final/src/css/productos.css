@@ -224,3 +224,41 @@ header{
     border-style: none;
     border-radius: 5px;
 }
+
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 50%;  
+    height: 50%; 
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+ 
+/* Close button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    
+    text-decoration: none;
+    cursor: pointer;
+}
