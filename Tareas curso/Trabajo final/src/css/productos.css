@@ -262,3 +262,91 @@ header{
     text-decoration: none;
     cursor: pointer;
 }
+
+/*         FOOTER         */
+
+footer{
+    background: #a5a4a4;
+    padding-top: 5px;
+}
+
+.fcontainer-footer{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contenedor2{
+    width: 33.3%;
+}
+
+.footer-contenedor3{
+    width: 33.3%;
+}
+
+h3{
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.footer-contenedor2 p{
+    width: 190px;
+    margin: auto;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.footer-contenedor2 ul{
+    text-align: center;
+}
+
+.lista{
+    padding: 0;
+}
+
+.lista li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 2px;
+    position: relative;
+    font-size: 15px;
+}
+
+.lista::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+
+.lista li:hover::before{
+    width: 70px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+}
